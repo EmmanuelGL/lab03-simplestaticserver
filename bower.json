@@ -1,0 +1,24 @@
+{
+  "name": "simple-static-server",
+  "description": "servidor estatico simple",
+  "main": "index.js",
+  "authors": [
+    "@emmasgl"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "static",
+    "server"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
