@@ -1,26 +1,31 @@
 {
   "name": "simple-static-server",
   "version": "1.0.0",
-  "description": "servidor estatico simple",
-  "main": "index.js",
+  "description": "Servidor estatico simple",
+  "engines": {
+  "node": "7.9.0"
+  },
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "postinstall":"./bower install"
+    "start": "node server.js",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
-    "url": "#"
+    "url": "https://github.com/cesarpaulino/pwpc017.git"
   },
   "keywords": [
     "static",
     "server"
   ],
-  "author": "@emmasgl",
+  "author": "@cesarpaulino",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.1.2",
     "mime": "^1.3.4",
-    "bower":"^1.7.9"    
+    "mongodb": "^2.2.26",
+    "bower": "^1.7.9"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
