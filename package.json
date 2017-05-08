@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Servidor estatico simple",
   "engines": {
-  "node": "7.9.0"
+  "node": "6.9.4"
   },
   "main": "server.js",
   "scripts": {
