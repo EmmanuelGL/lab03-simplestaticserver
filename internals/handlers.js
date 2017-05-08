@@ -1,6 +1,6 @@
 var staticServer = require("./static-server");
 var config = require("../config/config");
-var mongo = require('mongodb').MongoClient;
+//var mongo = require('mongodb').MongoClient;
 var url = config.url;
 //cargando una liberia que
 //permite persear la informacion
