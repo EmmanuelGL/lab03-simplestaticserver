@@ -1,8 +1,8 @@
 var staticServer = require("./static-server");
-//var config = require("../config/config");
-//var mongo = require('mongodb').MongoClient;
-//var url = config.url;
-var url = 'mongodb://localhost:27017/Condos'
+var config = require("../config/config");
+var mongo = require('mongodb').MongoClient;
+var url = config.url;
+//var url = 'mongodb://localhost:27017/Condos'
 //cargando una liberia que
 //permite persear la informacion
 //de formularios
@@ -109,7 +109,7 @@ var getPostRoot = function (req, res) {
                         res.write(`<div class="col-xs-offset-2 col-xs-10">
                         <input 
                         type="button" 
-                        onclick=" location.href='http://127.0.0.1:3000' "
+                        onclick=" location.href='index.html' "
                         value="Regresar" 
                         name="boton"
                         class="btn btn-primary" />
@@ -135,7 +135,7 @@ var getPostRoot = function (req, res) {
                          res.write(`<div class="col-xs-offset-2 col-xs-10">
                         <input 
                         type="button" 
-                        onclick=" location.href='http://127.0.0.1:3000' "
+                        onclick=" location.href='index.html' "
                         value="Regresar" 
                         name="boton"
                         class="btn btn-primary" />
@@ -177,7 +177,7 @@ var getfind = function (req, res) {
                  res.write(`<div class="col-xs-offset-2 col-xs-10">
                         <input 
                         type="button" 
-                        onclick=" location.href='http://127.0.0.1:3000' "
+                        onclick=" location.href='index.html' "
                         value="Regresar" 
                         name="boton"
                         class="btn btn-primary" />
@@ -206,7 +206,7 @@ var getfind = function (req, res) {
                      res.write(`<p><div class="col-xs-offset-5 col-xs-10">
                         <input 
                         type="button" 
-                        onclick=" location.href='http://127.0.0.1:3000' "
+                        onclick=" location.href='index.html' "
                         value="Regresar" 
                         name="boton"
                         class="btn btn-primary" />
@@ -270,31 +270,13 @@ var getremove = function (req, res) {
         }
 
 
-            /* db.collection('contenido').find(data).toArray(
-            function (err, documents) {
-                if (err) return console.log(err);
-                if (documents.length == 0)
-                    res.write('no tienes ningun registro'+documents.length);
-                })
-                if(data==)*/
-                /*if()
-                 res.write(`<div class="col-xs-offset-2 col-xs-10">
-                        <input 
-                        type="button" 
-                        onclick=" location.href='http://127.0.0.1:3000' "
-                        value="Regresar" 
-                        name="boton"
-                        class="btn btn-primary" />
-                        </div>`);
-                }  
-                else {*/
-            //res.write(`<p> ${JSON.stringify(data)}</p>`);
+          
             mongo.connect(url, function(err, db) {
                 if (err) throw err
                 var collection = db.collection('contenido')
                 collection.remove(data, function(err) {
-                    if (err){res.write('no se elimino nada')
-                    }
+                    if (err)res.write('no se elimino nada')
+                    
                     db.close()
                 })
                 })

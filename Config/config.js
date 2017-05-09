@@ -8,6 +8,6 @@ module.exports={
     "warning":"yellow"
 },
 "STATIC_PATH":"./static",
-"url": process.env.DB || "mongodb://localhost:27017/Condos" 
+"url": process.env.DB || "mongodb://condos:condos@ds133251.mlab.com:33251/condos" 
 
 };
