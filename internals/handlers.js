@@ -2,8 +2,7 @@ var staticServer = require("./static-server");
 //var config = require("../config/config");
 //var mongo = require('mongodb').MongoClient;
 //var url = config.url;
-//var url = 'mongodb://localhost:27017/Condos'
-var url = 'mongodb://condos:condos@ds133251.mlab.com:33251/condos'
+var url = 'mongodb://localhost:27017/Condos'
 //cargando una liberia que
 //permite persear la informacion
 //de formularios
